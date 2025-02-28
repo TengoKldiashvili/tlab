@@ -1,3 +1,3 @@
 # First project
 
-This is my project created using HTML,CSS,JAVASCRIPT,PHP AND MYSQLI.
+This is my project created using HTML,CSS,JAVASCRIPT,PHP AND MYSQL.
