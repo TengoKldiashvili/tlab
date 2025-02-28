@@ -1,0 +1,229 @@
+.container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 500px;
+    max-height: 1000px;
+  }
+  .bg{
+    width: 100%;
+    max-height: 100vh;
+    height: auto;
+    z-index: 1;
+  }
+/* stripes START */
+  .stripes{
+    position: relative;
+    z-index: 2;
+  }
+  .stripes img {
+    position: absolute; 
+    margin-top: 55%;
+    left: 60%;
+    width: 40%; 
+    height: auto;
+
+      }
+  .redstripe{
+    animation: stripeaction 0.2s forwards 0.5s,leftstripe 0.2s forwards 4.8s,stripeaction 0.2s forwards 5.3s,leftstripe 0.2s forwards 6.5s,stripeaction 0.2s forwards 7.2s,leftstripe 0.2s forwards 9s;
+  }
+  .bluestripe{
+    animation: stripeaction 0.2s forwards 0.6s,leftstripe 0.2s forwards 4.8s,stripeaction 0.2s forwards 5.4s,leftstripe 0.2s forwards 6.5s,stripeaction 0.2s forwards 7.3s,leftstripe 0.2s forwards 9s;
+  }
+  .yellowstripe{
+    animation: stripeaction 0.2s forwards 0.7s,leftstripe 0.2s forwards 4.8s,stripeaction 0.2s forwards 5.5s,leftstripe 0.2s forwards 6.5s,stripeaction 0.2s forwards 7.4s,leftstripe 0.2s forwards 9s;
+  }
+  .greenstripe{
+    animation: stripeaction 0.2s forwards 0.8s,leftstripe 0.2s forwards 4.8s,stripeaction 0.2s forwards 5.6s,leftstripe 0.2s forwards 6.5s,stripeaction 0.2s forwards 7.5s,leftstripe 0.2s forwards 9s;
+  }
+  @keyframes stripeaction {
+    0%{opacity: 0;
+        left: 40%;}
+    100%{opacity: 1;
+        left: 60%;}
+  }
+@keyframes leftstripe {
+    0%{left: 60%;}
+    100%{left: 110%;}
+}
+
+/* stripes OVER */
+/* main image START  */
+  .mainimg{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    animation: blurtransition 0.5s forwards 4.8s,blurtransition 0.5s forwards 6.5s,blurtransitionOVER 0.5s forwards 9s;
+  }
+/* main image OVER  */
+
+/* HEADLINE890 START */
+  .headline890{
+    position:absolute;
+    z-index: 2;
+    width: 95%;
+    margin-top: 20%;
+    opacity: 0;
+    animation: headline890start 0.2s forwards 0.2s,headline890over 0.3s forwards 2.2s;
+  }
+  @keyframes headline890start {
+    0%{scale: 0;
+    opacity: 0;}
+    100%{scale: 1;
+    opacity: 1;}
+  }
+  @keyframes headline890over {
+    0%{scale: 1;
+    opacity: 1;}
+    100%{scale: 0;
+    opacity: 0;}
+  }
+/* HEADLINE890 OVER */
+/* PRICE890 AND BIGBANG START */
+.price890, .bigbang890{
+    position: absolute; 
+    height: auto;
+    opacity: 0;
+    animation: bigbang890price 0.5s forwards 2.5s,blurtransition 0.5s forwards 4.8s,blurtransition 0.5s forwards 6.5s,blurtransitionOVER 0.5s forwards 9s;
+}
+.price890{
+    width: 35%;
+    margin-left: 3%;
+    margin-top: 75%;
+    z-index: 3;
+}
+.bigbang890{
+    width: 40%;
+    margin-top: 40%;
+    z-index: 2;
+}
+@keyframes bigbang890price {
+    0%{scale: 0;
+        opacity: 0;}
+    100%{scale: 1;
+        opacity: 1;}
+}
+/* PRICE890 AND BIGBANG OVER */
+/* bottom texts START */
+.paprika, .doublecheesburgertext, .fishtxt{
+    position:absolute;
+    z-index: 2;
+    width: 50%;
+    margin-top: 135%;
+    margin-left: 35%;
+    opacity: 0;
+}
+.paprika{
+    animation: bottomtext 0.2s forwards 2.7s, bottomtextover 0.2s forwards 4.8s;
+}
+.doublecheesburgertext{
+    animation: bottomtext 0.2s forwards 5.6s, bottomtextover 0.2s forwards 6.5s;
+    width: 60%;
+}
+.fishtxt{
+    animation: bottomtext 0.2s forwards 7.6s, bottomtextover 0.2s forwards 9s;
+    width: 40%;
+}
+@keyframes bottomtext {
+    0%{scale: 0;
+        opacity: 0;
+        margin-top: 145%;}
+    100%{
+        scale: 1;
+        opacity: 1;
+        margin-top: 135%;
+    }
+}
+@keyframes bottomtextover {
+    0%{ scale: 1;
+        opacity: 1;
+        margin-top: 135%;}
+    100%{
+        scale: 0;
+        opacity: 0;
+        margin-top: 145%;
+    }
+}
+/* bottom texts OVER */
+/* BLUR ANIMATION START */
+@keyframes blurtransition {
+    0% {
+        transform: scale(1);
+        opacity: 100%;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 50%;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 100%;
+    }
+}
+@keyframes blurtransitionOVER {
+    0% {
+        transform: scale(1);
+        opacity: 100%;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: 50%;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0%;
+    }
+}
+/* BLUR ANIMATION OVER */
+
+/* end text and button START */
+.buttondown, .txtend{
+    position:absolute;
+    z-index: 2;
+    width: 100%;
+    opacity: 0;
+}
+.txtend{
+    animation: endscale 0.5s forwards 9.5s;
+
+}
+.buttondown{
+    animation: endleftbutton 0.5s forwards 9.5s,buttonClick 0.5s forwards 10.5s,buttonClick 0.5s forwards 11.5s;
+}
+@keyframes endleftbutton {
+    0%{opacity: 0;
+        left: 50%;
+        }
+    100%{opacity: 1;
+        left: 0%;
+        }
+}
+@keyframes endscale {
+    0%{opacity: 0;
+        left: 20%;
+        scale: 0;}
+    100%{opacity: 1;
+        left: 0%;
+        scale: 1;}
+}
+@keyframes buttonClick {
+    0%{scale: 1;}
+    50%{scale: 1.1;}
+    100%{scale: 1;}
+}
+/* end text and button OVER */
+.footerlogo{
+    position:absolute;
+    z-index: 2;
+    width: 100%;
+    opacity: 0%;
+    animation: footerlogo 2s forwards 0.5s;
+}
+@keyframes footerlogo {
+    0%{opacity: 0%;}
+    100%{opacity: 60%;}
+}
