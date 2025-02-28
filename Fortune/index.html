@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Teller Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="title">Fortune Teller Game</h1>
+    <div id="balance-container">
+        <h2>Balance: <span id="balance">1000</span></h2>
+    </div>
+    <div class="container">
+        <img id="refresh" src="deck/blank.png" alt="Refresh">
+        <img id="onecard" class="card" src="deck/blank.png" alt="Card 1">
+        <img id="twocard" class="card" src="deck/blank.png" alt="Card 2">
+        <img id="threecard" class="card" src="deck/blank.png" alt="Card 3">
+        <img id="fivecard" class="card" src="deck/blank.png" alt="Card 4">
+        <img id="sixcard" class="card" src="deck/blank.png" alt="Card 5">
+    </div>
+    <div class="button-container">
+        <button id="change" onclick="cardchange()" disabled>Change Card Once</button>
+        <button id="up" onclick="up()" disabled>Up</button>
+        <button id="down" onclick="down()" disabled>Down</button>
+    </div>
+    <div class="button-container">
+        <button id="plus20" onclick="plus20()">$20</button>
+        <button id="plus40" class="buttonplus" onclick="plus40()">$40</button>
+        <button id="plus60" class="buttonplus" onclick="plus60()">$60</button>
+        <button id="plus80" class="buttonplus" onclick="plus80()">$80</button>
+        <button id="reload" onclick="rel()">START</button>
+
+    </div>
+    <div class="result" id="result">RESULT</div>
+    <script src="app.js"></script>
+</body>
+
+</html>
